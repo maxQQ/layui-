@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../assets/css/layui.css">
+	<link rel="stylesheet" href="../assets/font2/iconfont.css">
+	<link rel="stylesheet" href="../assets/css/view.css"/>
+	<link rel="icon" href="/favicon.ico">
+	<script src="../assets/jquery.js"></script>
+	<title>套餐管理</title>
+</head>
+<body class="layui-view-body">
+	<div class="layui-content">
+		<div class="layui-page-header">
+		    <div class="pagewrap">
+		        <span class="layui-breadcrumb">
+		          <a href="">第三方平台管理</a>
+		          <a href="">套餐管理</a>
+		        </span>
+		    </div>
+		</div>
+		<div class="tool_pannel">
+			<form class="layui-form">
+				<div class="layui-form-item">
+					<div class="layui-form-inline">
+						<label class="layui-form-label">渠道名称：</label>
+						<div class="layui-input-inline">
+							<select name="" id=""></select>
+						</div>
+					</div>
+					<div class="layui-form-inline">
+						<label class="layui-form-label">套餐名称：</label>
+						<div class="layui-input-inline">
+							<input type="text" class="layui-input" placeholder="请输入">
+						</div>
+					</div>
+					<div class="layui-form-inline">
+						<label class="layui-form-label">启动状态：</label>
+						<div class="layui-input-inline">
+							<select name="" id=""></select>
+						</div>
+					</div>
+					<div class="layui-form-inline">
+						<button class="layui-btn layui-btn-blue"><i class="iconfont icon-sousuo"></i>搜索</button>
+					</div>
+				</div>
+				<button class="layui-btn layui-btn-blue"><i class="iconfont icon-shuaxin"></i>同步套餐</button>
+			</form>
+		</div>
+		<div class="table_wrap">
+			<table class="layui-table" lay-skin="nob">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>渠道名称</th>
+						<th>套餐编号</th>
+						<th>套餐名称及组合项</th>
+						<th>售价</th>
+						<th>性别</th>
+						<th>婚姻状态</th>
+						<th>结算价</th>
+						<th>同步时间</th>
+						<th>启用状态</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>康康体检网</td>
+						<td>001458</td>
+						<td><span onclick="getMoreInfo()" class="text_blue">脑血管疾病筛查组合（女）</span></td>
+						<td>￥3626.28</td>
+						<td>男</td>
+						<td>已婚</td>
+						<td>￥3626.28</td>
+						<td>2019-08-20   12：00</td>
+						<td><span class="text_status">已启用</span></td>
+						<td class="tooltd">
+							<a href="javascript:;" class="text_blue" onclick="edit(this)">编辑</a>
+						</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>康康体检网</td>
+						<td>001458</td>
+						<td><span class="text_blue">脑血管疾病筛查组合（女）</span></td>
+						<td>￥3626.28</td>
+						<td>男</td>
+						<td>已婚</td>
+						<td>￥3626.28</td>
+						<td>2019-08-20   12：00</td>
+						<td><span class="text_status text_status2">已启用</span></td>
+						<td class="tooltd">
+							<a href="欢迎页面.html"  target="right_frame" class="text_blue">编辑</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- 为空 -->
+			<div class="data_none"><img src="../assets/images/kong.png" alt=""></div>
+			<!-- 分页样式 -->
+			<div class="table_pages">
+				<span class="page-prev"><i class="layui-icon">&#xe603;</i></span>
+				<a href="" class="on">1</a>
+				<a href="">2</a>
+				<a href="">3</a>
+				<a href="">4</a>
+				<span class="page-next"><i class="layui-icon">&#xe602;</i></span>
+				<span class="page-count">共 5 页</span>
+			</div>
+		</div>
+	</div>
+	<!-- 编辑弹窗 -->
+	<div class="edit_dialog">
+		<div class="layui-form">
+			<div class="layui-form-item">
+				<label class="layui-form-label">企业名称：</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" placeholder="请输入">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">企业编号：</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" placeholder="请输入">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">套餐名称：</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" placeholder="请输入">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">套餐编号：</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" placeholder="请输入">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">价格：</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" value="1441" readonly="true">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">结算价：</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" value="1441" readonly="true">
+				</div>
+			</div>
+			<div class="buttonwrap">
+				<a href="javascript:;" class="layui-btn layui-btn-blue yes" style="width: auto;">确认修改</a>
+			</div>
+		</div>
+	</div>
+	<!-- 套餐信息查看 -->
+	<div class="moreInfoTab">
+		<table class="layui-table">
+		<thead>
+			<tr>
+				<th>组合项目编号</th>
+				<th>组合项目名称</th>
+				<th>科室编号</th>
+				<th>科室名称</th>
+				<th>单价</th>
+				<th>性别</th>
+				<th>是否妇科</th>
+			</tr>
+			<tbody>
+				<tr>
+					<td>0109</td>
+					<td>内科</td>
+					<td>01</td>
+					<td>内科</td>
+					<td>0</td>
+					<td>不限</td>
+					<td>否</td>
+				</tr>
+				<tr>
+					<td>0109</td>
+					<td>内科</td>
+					<td>01</td>
+					<td>内科</td>
+					<td>0</td>
+					<td>不限</td>
+					<td>否</td>
+				</tr>
+				<tr>
+					<td>0109</td>
+					<td>内科</td>
+					<td>01</td>
+					<td>内科</td>
+					<td>0</td>
+					<td>不限</td>
+					<td>否</td>
+				</tr>
+				
+			</tbody>
+		</thead>
+	</table>
+	</div>	
+	<script src="../assets/layui.all.js"></script>
+	<script type="text/javascript">
+		//编辑操作
+		function edit() {
+			var i = layer.open({
+				type: 1,
+				title: ['套餐编辑','font-weight:bold;font-size:16px'],
+				area: ['540px', 'auto'],
+				content: $('.edit_dialog'),
+				cancel: function() {
+					$('.edit_dialog').hide()
+				}
+			})
+		}
+		$('.yes').click(function(){
+			//layer.msg('修改成功')
+			alert(1)
+		})
+		//查看操作
+		function getMoreInfo() {
+			layer.open({
+				type: 1,
+				title: ['脑血管疾病筛查组合（女）','font-weight:bold;font-size:16px'],
+				area: ['auto', '400px'],
+				content: $('.moreInfoTab'),
+				cancel: function() {
+					$('.moreInfoTab').hide()
+				}
+			})
+		}
+	</script>
+</body>
+</html>

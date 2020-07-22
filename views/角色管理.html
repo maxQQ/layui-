@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../assets/css/layui.css">
+	<link rel="stylesheet" href="../assets/font2/iconfont.css">
+	<link rel="stylesheet" href="../assets/css/view.css"/>
+	<link rel="icon" href="/favicon.ico">
+	<script src="../assets/jquery.js"></script>
+	<title></title>
+</head>
+<body class="layui-view-body">
+	<div class="layui-content">
+		<div class="layui-page-header">
+		    <div class="pagewrap">
+		        <span class="layui-breadcrumb">
+		          <a href="">第三方平台管理</a>
+		          <a href="">套餐管理</a>
+		        </span>
+		    </div>
+		</div>
+		<div class="tool_pannel">
+			<form class="layui-form">
+				<div class="layui-form-item">
+					<div class="layui-form-inline">
+						<label class="layui-form-label">角色名称名称：</label>
+						<div class="layui-input-inline">
+							<input type="text" class="layui-input" placeholder="请输入">
+						</div>
+					</div>
+					<div class="layui-form-inline">
+						<button class="layui-btn layui-btn-blue"><i class="iconfont icon-sousuo"></i>搜索</button>
+					</div>
+				</div>
+				<button class="layui-btn layui-btn-blue">创建角色</button>
+			</form>
+		</div>
+		<div class="table_wrap">
+			<table class="layui-table layui-form" lay-skin='nob'>
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>角色名</th>
+						<th>描述</th>
+						<th>创建时间</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>管理员</td>
+						<td>管理员</td>
+						<td>2019-01-01  14:26:20</td>
+						<td class="tooltd">
+							<a class="text_blue" href="javascript:;" onclick="delet()">删除</a>
+							<a href="javascript:;" class="text_blue" onclick="edit()">编辑</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- 分页样式 -->
+			<div class="table_pages">
+				<span class="page-prev"><i class="layui-icon">&#xe603;</i></span>
+				<a href="" class="on">1</a>
+				<a href="">2</a>
+				<a href="">3</a>
+				<a href="">4</a>
+				<span class="page-next"><i class="layui-icon">&#xe602;</i></span>
+				<span class="page-count">共 5 页</span>
+			</div>
+		</div>
+	</div>
+	<!-- 编辑弹窗 -->
+	<div class="edit_dialog">
+		<div class="layui-form">
+			<div class="layui-form-item">
+				<label class="layui-form-label">角色名称：</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" placeholder="请输入">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">角色描述：</label>
+				<div class="layui-input-inline">
+					<textarea class="layui-textarea" placeholder="请输入至少五个字符"></textarea>
+				</div>
+			</div>
+			<div class="buttonwrap">
+				<a href="javascript:;" class="layui-btn layui-btn-primary close">取消</a>
+				<a href="javascript:;" class="layui-btn layui-btn-blue yes">保存</a>
+			</div>
+		</div>
+	</div>
+	<!-- 删除弹窗 -->
+	<div class="delet_dialog">
+		<h3><img src="../assets/images/warn.png" alt="">这是进行一项操作时必须了解的重要信息</h3>
+		<p>用户须知的信息，你还要继续吗？</p>
+		<div class="buttonwrap">
+			<a href="javascript:;" class="layui-btn layui-btn-primary close">取消</a>
+			<a href="javascript:;" class="layui-btn layui-btn-blue yes">保存</a>
+		</div>
+	</div>
+	<script src="../assets/layui.all.js"></script>
+	<script>
+		//编辑操作
+		function edit() {
+			var i = layer.open({
+				type: 1,
+				title: ['创建角色','font-weight:bold;font-size:16px'],
+				area: ['540px', '340px'],
+				content: $('.edit_dialog'),
+				cancel: function() {
+					$('.edit_dialog').hide()
+				}
+			})
+			$('.close').click(function() {
+				layer.close(i);
+				$('.edit_dialog').hide()
+			})
+			$('.yes').click(function(){
+				layer.msg('保存中...', { icon: 16, shade: [0.5, '#f5f5f5'],time: false });
+			})
+		}
+		//删除操作
+		function delet() {
+			var i = layer.open({
+				type: 1,
+				title: '',
+				closeBtn: 0,
+				area: ['400px', '200px'],
+				content: $('.delet_dialog') 
+			})
+			$('.close').click(function() {
+				layer.close(i);
+				$('.delet_dialog').hide()
+			})
+			$('.yes').click(function(){
+				layer.msg('保存中...', { icon: 16, shade: [0.5, '#f5f5f5'],time: false });
+			})
+		}
+		function load() {
+ 			layer.msg('恭喜您，加载完成！', {icon: 1, time: 1000});
+ 			layer.msg('加载失败！', {icon: 5, time: 1000});
+			layer.msg('加载中...', { icon: 16, shade: [0.5, '#f5f5f5'] });
+		}
+	</script>
+</body>
+</html>

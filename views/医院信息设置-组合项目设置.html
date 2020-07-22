@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../assets/css/layui.css">
+	<link rel="stylesheet" href="../assets/font2/iconfont.css">
+	<link rel="stylesheet" href="../assets/css/view.css"/>
+	<link rel="icon" href="/favicon.ico">
+	<script src="../assets/jquery.js"></script>
+	<title>医院信息设置-组合项目设置</title>
+</head>
+<body class="layui-view-body">
+	<div class="layui-content">
+		<div class="layui-page-header">
+		    <div class="pagewrap">
+		        <span class="layui-breadcrumb">
+		          <a href="">第三方平台管理</a>
+		          <a href="">套餐管理</a>
+		        </span>
+		    </div>
+		</div>
+		<div class="tool_pannel">
+			<form class="layui-form">
+				<div class="layui-form-item">
+					<div class="layui-form-inline">
+						<label class="layui-form-label">组合项目名称：</label>
+						<div class="layui-input-inline">
+							<input type="text" class="layui-input" placeholder="请输入">
+						</div>
+					</div>
+					<div class="layui-form-inline">
+						<label class="layui-form-label">是否瓶颈项目：</label>
+						<div class="layui-input-inline">
+							<select></select>
+						</div>
+					</div>
+					<div class="layui-form-inline">
+						<label class="layui-form-label">是否启用：</label>
+						<div class="layui-input-inline">
+							<select name="" id=""></select>
+						</div>
+					</div>
+					<div class="layui-form-inline">
+						<button class="layui-btn layui-btn-blue"><i class="iconfont icon-sousuo"></i>搜索</button>
+					</div>
+				</div>
+				<button class="layui-btn layui-btn-blue"><i class="iconfont icon-shuaxin"></i>同步套餐</button>
+			</form>
+		</div>
+		<div class="table_wrap">
+			<table class="layui-table layui-form" lay-skin='nob'>
+				<thead>
+					<tr>
+						<th>组合项目编号</th>
+						<th>组合项目名称</th>
+						<th>科室编号</th>
+						<th>科室名称</th>
+						<th>单价</th>
+						<th>性别</th>
+						<th>是否妇科</th>
+						<th>是否启用</th>
+						<th>初次同步时间</th>
+						<th>更新时间</th>
+						<th style="width: 200px;">上限人数</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>4311</td>
+						<td>(外)遗传性肿瘤易感基因</td>
+						<td>009</td>
+						<td>内科</td>
+						<td>￥3623.54</td>
+						<td>男</td>
+						<td>否</td>
+						<td>否</td>
+						<td>2019-01-01  14:26:20 </td>
+						<td>2019-01-01  14:26:20 </td>
+						<td class="show_bartd">
+							<input type="text" value="0" readonly="true">
+							<span class="edit"></span>
+							<span class="aspan">
+								<a class="text_blue" href="javascript:;">保存</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+								<a class="text_blue" onclick="quxiao(this)" href="javascript:;">取消</a>
+							</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- 分页样式 -->
+			<div class="table_pages">
+				<span class="page-prev"><i class="layui-icon">&#xe603;</i></span>
+				<a href="" class="on">1</a>
+				<a href="">2</a>
+				<a href="">3</a>
+				<a href="">4</a>
+				<span class="page-next"><i class="layui-icon">&#xe602;</i></span>
+				<span class="page-count">共 5 页</span>
+			</div>
+		</div>
+	</div>
+	<script src="../assets/layui.all.js"></script>
+	<script>
+		$(function() {
+			$('.show_bartd .edit').click(function() {
+				$(this).hide();
+				$(this).prev().addClass('layui-input');
+				$(this).prev().attr('readonly',false);
+				$(this).next().show();
+			})
+		})
+		function quxiao(that) {
+			$(that).parent().hide();
+			$(that).parents('.show_bartd').find('.edit').show();
+			$(that).parents('.show_bartd').find('input').removeClass('layui-input').attr('readonly',true).val(0);
+		}
+	</script>
+</body>
+</html>

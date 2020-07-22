@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../assets/css/layui.css">
+	<link rel="stylesheet" href="../assets/font2/iconfont.css">
+	<link rel="stylesheet" href="../assets/css/view.css"/>
+	<link rel="icon" href="/favicon.ico">
+	<script src="../assets/jquery.js"></script>
+	<title>权限配置</title>
+</head>
+<body class="layui-view-body">
+	<div class="layui-content">
+		<div class="layui-page-header">
+		    <div class="pagewrap">
+		        <span class="layui-breadcrumb">
+		          <a href="">第三方平台管理</a>
+		          <a href="">套餐管理</a>
+		        </span>
+		    </div>
+		</div>
+		<div class="tool_pannel">
+			<form class="layui-form">
+				<div class="layui-form-item">
+					<div class="layui-form-inline">
+						<label class="layui-form-label">角色名称名称：</label>
+						<div class="layui-input-inline">
+							<input type="text" class="layui-input" placeholder="请输入">
+						</div>
+					</div>
+					<div class="layui-form-inline">
+						<button class="layui-btn layui-btn-blue"><i class="iconfont icon-sousuo"></i>搜索</button>
+					</div>
+				</div>
+				<button class="layui-btn layui-btn-blue">创建角色</button>
+			</form>
+		</div>
+		<div class="table_wrap">
+			<table class="layui-table layui-form" lay-skin='nob'>
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>角色名</th>
+						<th>描述</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>管理员</td>
+						<td>管理员</td>
+						<td class="tooltd">
+							<a href="javascript:;" class="text_blue" onclick="edit()">编辑</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- 分页样式 -->
+			<div class="table_pages">
+				<span class="page-prev"><i class="layui-icon">&#xe603;</i></span>
+				<a href="" class="on">1</a>
+				<a href="">2</a>
+				<a href="">3</a>
+				<a href="">4</a>
+				<span class="page-next"><i class="layui-icon">&#xe602;</i></span>
+				<span class="page-count">共 5 页</span>
+			</div>
+		</div>
+	</div>
+	<!-- 权限配置编辑弹窗 -->
+	<div id="editTb">
+		<table class="layui-table layui-form table_qx">
+			<thead>
+				<tr>
+					<th>一级菜单</th>
+					<th>二级菜单</th>
+					<th>三级菜单</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input type="checkbox" name="" title="系统管理" lay-skin="primary"></td>
+					<td>
+						<input type="checkbox" name="" title="角色管理" lay-skin="primary">
+						<input type="checkbox" name="" title="权限管理" lay-skin="primary">
+						<input type="checkbox" name="" title="账号管理" lay-skin="primary">
+					</td>
+					<td>
+						<input type="checkbox" name="" title="添加" lay-skin="primary">
+						<input type="checkbox" name="" title="修改" lay-skin="primary">
+						<input type="checkbox" name="" title="删除" lay-skin="primary">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="buttonwrap">
+			<a href="javascript:;" class="layui-btn layui-btn-primary close">取消</a>
+			<a href="javascript:;" class="layui-btn layui-btn-blue yes">保存</a>
+		</div>
+	</div>
+	<script src="../assets/layui.all.js"></script>
+	<script>
+		//编辑操作
+		function edit() {
+			var i = layer.open({
+				type: 1,
+				title: ['创建角色','font-weight:bold;font-size:16px'],
+				area: ['1100px', 'auto'],
+				content: $('#editTb') 
+			})
+			$('.close').click(function() {
+				layer.close(i);
+				$('#editTb').hide()
+			})
+			$('.yes').click(function(){
+				layer.msg('保存中...', { icon: 16, shade: [0.5, '#f5f5f5'],time: false });
+			})
+		}
+	</script>
+</body>
+</html>

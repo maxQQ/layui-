@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../assets/css/layui.css">
+	<link rel="stylesheet" href="../assets/font2/iconfont.css">
+	<link rel="stylesheet" href="../assets/css/view.css"/>
+	<link rel="icon" href="/favicon.ico">
+	<script src="../assets/jquery.js"></script>
+	<title>套餐管理</title>
+</head>
+<body class="layui-view-body">
+	<div class="layui-content">
+		<div class="layui-page-header">
+		    <div class="pagewrap">
+		        <span class="layui-breadcrumb">
+		          <a href="">第三方平台管理</a>
+		          <a href="">套餐管理</a>
+		        </span>
+		    </div>
+		</div>
+		<div id="pqsz_wrap">
+			<div class="layui-row layui-col-space30">
+				<div class="layui-col-md6 layui-form">
+					<div>
+						<div class="box-item">
+							<div class="box-title">选择企业</div>
+							<div class="layui-input-inline inputW100" style="width: 310px;">
+								<select name="" id="" style="width: 100%;">
+									<option value="">请选择渠道</option>
+								</select>
+							</div>
+						</div>
+						<div class="box-item">
+							<div class="box-title">选择号源时间区间和号源</div>
+							<div class="layui-input-inline inputW100" style="width: 310px;">
+								<input type="text" class="layui-input">
+							</div>
+						</div>
+						<div class="box-item box-yysz">
+							<div class="box-title">号源设置</div>
+							<div class="box-block">
+								<div class="box-inline">
+									<label class="box-label">时间段：</label>
+									<div class="layui-input-inline layui-input-inline3">
+										<input type="text" class="layui-input">
+									</div>
+									<label class="box-label" style="margin-right: 0;">~</label>
+									<div class="layui-input-inline layui-input-inline3">
+										<input type="text" class="layui-input">
+									</div>
+								</div>
+								<div class="box-inline">
+									<label class="box-label">每日号源数量</label>
+									<div class="layui-input-inline layui-input-inline2">
+										<input type="text" class="layui-input">
+									</div>
+								</div>
+								<div class="box-inline">
+									<span class="cut">-</span>
+								</div>
+							</div>
+							<div class="box-block">
+								<div class="box-inline">
+									<label class="box-label">时间段：</label>
+									<div class="layui-input-inline layui-input-inline3">
+										<input type="text" class="layui-input">
+									</div>
+									<label class="box-label" style="margin-right: 0;">~</label>
+									<div class="layui-input-inline layui-input-inline3">
+										<input type="text" class="layui-input">
+									</div>
+								</div>
+								<div class="box-inline">
+									<label class="box-label">每日号源数量</label>
+									<div class="layui-input-inline layui-input-inline2">
+										<input type="text" class="layui-input">
+									</div>
+								</div>
+								<div class="box-inline">
+									<span class="cut">-</span>
+								</div>
+							</div>
+							<div class="addBtn" style="width: 532px;">
+								<i class="layui-icon">&#xe654;</i>
+								<span>添加</span>
+							</div>
+						</div>
+						<div class="box-item">
+							<div class="box-title">休息日设置</div>
+							<div class="checkes_wrap">
+								<input type="checkbox" name="" title="周一" lay-skin="primary">
+								<input type="checkbox" name="" title="周二" lay-skin="primary"> 
+								<input type="checkbox" name="" title="周三" lay-skin="primary"> 
+								<input type="checkbox" name="" title="周四" lay-skin="primary"> 
+								<input type="checkbox" name="" title="周五" lay-skin="primary"> 
+								<input type="checkbox" name="" title="周六" lay-skin="primary"> 
+								<input type="checkbox" name="" title="周日" lay-skin="primary"> 
+							</div>
+						</div>
+						<div class="box-item box-yysz">
+							<div class="box-title">预约设置</div>
+							<div class="box-block">需提前
+								<div class="layui-input-inline layui-input-inline2">
+									<input type="text" class="layui-input">
+								</div>天预约，且在
+								<div class="layui-input-inline layui-input-inline3">
+									<input type="text" class="layui-input">
+								</div>点之前预约
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="layui-col-md6">
+					<div>
+						日历插件
+					</div>
+				</div>
+			</div>
+			<div class="layui-row">
+				<div class="box-item">
+					<div class="box-title">瓶颈套餐号源规则设置</div>
+					<div class="box-block">
+						<div class="box-inline">
+							<label class="box-label">规则一：</label>
+							<div class="layui-input-inline model_select">
+								<div class="hd"></div>
+								<ul class="bd">
+									<li>1公安局-套餐二（男）</li>
+									<li>2公安局-套餐二（男）</li>
+									<li>3公安局-套餐二（男）</li>
+									<li>4公安局-套餐二（男）</li>
+								</ul>
+								<i class="layui-edge"></i>
+							</div>
+						</div>
+						<div class="box-inline">
+							<label class="box-label">号源数量</label>
+							<div class="layui-input-inline layui-input-inline2">
+								<input type="text" class="layui-input">
+							</div>
+						</div>
+						<div class="box-inline">
+							<span class="cut">-</span>
+						</div>
+					</div>
+					<div class="box-block">
+						<div class="box-inline">
+							<label class="box-label">规则一：</label>
+							<div class="layui-input-inline model_select">
+								<div class="hd"></div>
+								<ul class="bd">
+									<li>1公安局-套餐二（男）</li>
+									<li>2公安局-套餐二（男）</li>
+									<li>3公安局-套餐二（男）</li>
+									<li>4公安局-套餐二（男）</li>
+								</ul>
+								<i class="layui-edge"></i>
+							</div>
+						</div>
+						<div class="box-inline">
+							<label class="box-label">号源数量</label>
+							<div class="layui-input-inline layui-input-inline2">
+								<input type="text" class="layui-input">
+							</div>
+						</div>
+						<div class="box-inline">
+							<span class="cut">-</span>
+						</div>
+					</div>
+					<style type="text/css">
+						.inputW100 input {
+							width: 100% !important;
+						}
+						.model_select {
+							width: 630px;
+							position: relative;
+							font-size: 14px;
+							color: #666666;
+						}
+						.model_select .hd {
+							min-height: 36px;
+							line-height: 36px;
+							padding: 0 10px;
+							background-color: #fffeff;
+							border-radius: 4px;
+							border: solid 1px #e5e5e5;
+						}
+						.model_select .hd>div {
+							display: inline-block;
+						}
+						.model_select .hd span {
+							position: relative;
+							background-color: #edeff2;
+							border-radius: 4px;
+							padding: 4px 10px;
+							padding-right: 24px;
+							display: inline-block;
+							line-height: initial;
+						}
+						.model_select .hd span i {
+							position: absolute;
+							width: 14px;
+							height: 14px;
+							background: url(../assets/images/c.png) no-repeat;
+							background-size: 100%;
+							top: 50%;
+							right: 8px;
+							margin-top: -7px;
+							cursor: pointer;
+						}
+						.model_select .hd label {
+							margin: 0 4px;
+							display: inline-block;
+						}
+						.model_select .bd {
+							position: absolute;
+							width: 628px;
+							left: 0;
+							background-color: #fffeff;
+							border-radius: 4px;
+							border: solid 1px #e5e5e5;
+							display: none;
+							z-index: 10;
+						}
+						.model_selected .bd {
+							display: block;
+						}
+						.model_select .bd li {
+							height: 32px;
+							line-height: 32px;
+							padding: 0 10px;
+							cursor: pointer;
+						}
+						.model_select .bd li.on {
+							background: #e9f1ff;
+						}
+						.model_select .layui-edge {
+							position: absolute;
+							right: 10px;
+							top: 50%;
+							margin-top: -3px;
+							cursor: pointer;
+							border-width: 6px;
+							border-top-color: #c2c2c2;
+							border-top-style: solid;
+							transition: all .3s;
+							-webkit-transition: all .3s;
+						}
+						.model_selected .layui-edge {
+							margin-top: -9px;
+							-webkit-transform: rotate(180deg);
+							transform: rotate(180deg);
+						}
+					</style>
+					<script>
+						$('.model_select').click(function() {
+							var _this = $(this);
+							_this.parents('.box-block').siblings('.box-block').find('.model_select').removeClass('model_selected');
+							_this.toggleClass('model_selected');
+							return false;
+						})
+						$('.model_select').on('click','li',function() {
+							var _this = $(this);
+							var _text = _this.text();
+							var _div = _this.parents('.model_select').find('.c');
+							_this.toggleClass('on');
+							var _html = '<div class=\'c\'><span>'+_text+'<i></i></span><label>+</label><div>';
+							if(_this.hasClass('on')) {
+								_this.parents('.model_select').find('.hd').append(_html);
+							}else {
+								for(var i=0;i<_div.length;i++) {
+									if(_div.eq(i).find('span').text()==_text) {
+										_div.eq(i).remove();
+									}
+								}
+								if(_this.parents('.bd').find('.on').length==0) {
+									_this.parents('.model_select').removeClass('model_selected');
+								}
+							}
+							return false;
+						})
+						$('.model_select').on('click','.hd i',function() {
+							var _this = $(this);
+							var _div = _this.parents('.model_select').find('.c');
+							var _text = _this.parent().text();
+							console.log(_div.length);
+							var _li = _this.parents('.model_select').find('li');
+							console.log(_li.html())
+							for(var i=0;i<_li.length;i++) {
+								if(_li.eq(i).text()==_text) {
+									_li.eq(i).removeClass('on');
+								}
+							}
+							if(_div.length==1) {
+								_this.parents('.model_select').removeClass('model_selected');
+							}
+							_this.parents('.c').remove();
+							return false;
+						});
+						$(document).click(function() {
+							$('.model_select').removeClass('model_selected');
+						})
+					</script>
+					<div class="addBtn" style="width: 698px;">
+						<i class="layui-icon">&#xe654;</i>
+						<span>添加</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="c_btns_center">
+			<button class="layui-btn layui-btn-blue">保存</button>
+			<button class="layui-btn layui-btn-blue">完成</button>
+		</div>
+	</div>
+	<script src="../assets/layui.all.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../assets/css/layui.css">
+	<link rel="stylesheet" href="../assets/font2/iconfont.css">
+	<link rel="stylesheet" href="../assets/css/view.css"/>
+	<link rel="icon" href="/favicon.ico">
+	<script src="../assets/jquery.js"></script>
+	<title>通知中心</title>
+</head>
+<body class="layui-view-body">
+	<div class="layui-content">
+		<div class="content_header">通知中心</div>
+		<ul class="tzzx_list">
+			<dl class="item">
+				<dt>
+					<div class="title"><span class="layui-badge-dot"></span>康康体检网向您发起一笔退款申请，请查看</div>
+					<div class="time">2018年12月24日<i class="layui-icon">&#xe61a;</i></div>
+				</dt>
+				<dd>
+					樊春梅,女,已婚142729196907244822,18810953621,
+					山西省人民医院体检中心,老年常规套餐一（女）,
+					在线支付:2275元,体检时间：2019-08-12 ，
+					客户申请退款，请核实是否到检，未检请删除名单，
+					后期不做结算谢谢
+				</dd>
+			</dl>
+			<dl class="item">
+				<dt>
+					<div class="title"><span class="layui-badge-dot"></span>康康体检网向您发起一笔退款申请，请查看</div>
+					<div class="time">2018年12月24日<i class="layui-icon">&#xe61a;</i></div>
+				</dt>
+				<dd>
+					樊春梅,女,已婚142729196907244822,18810953621,
+					山西省人民医院体检中心,老年常规套餐一（女）,
+					在线支付:2275元,体检时间：2019-08-12 ，
+					客户申请退款，请核实是否到检，未检请删除名单，
+					后期不做结算谢谢
+				</dd>
+			</dl>
+			<dl class="item">
+				<dt>
+					<div class="title"><span class="layui-badge-dot layui-bg-gray"></span>康康体检网向您发起一笔退款申请，请查看</div>
+					<div class="time">2018年12月24日<i class="layui-icon">&#xe61a;</i></div>
+				</dt>
+				<dd>
+					樊春梅,女,已婚142729196907244822,18810953621,
+					山西省人民医院体检中心,老年常规套餐一（女）,
+					在线支付:2275元,体检时间：2019-08-12 ，
+					客户申请退款，请核实是否到检，未检请删除名单，
+					后期不做结算谢谢
+				</dd>
+			</dl>
+			<dl class="item text_default">
+				<dt>
+					<div class="title"><span class="layui-badge-dot layui-bg-gray"></span>康康体检网向您发起一笔退款申请，请查看</div>
+					<div class="time">2018年12月24日<i class="layui-icon">&#xe61a;</i></div>
+				</dt>
+				<dd>
+					樊春梅,女,已婚142729196907244822,18810953621,
+					山西省人民医院体检中心,老年常规套餐一（女）,
+					在线支付:2275元,体检时间：2019-08-12 ，
+					客户申请退款，请核实是否到检，未检请删除名单，
+					后期不做结算谢谢
+				</dd>
+			</dl>
+		</ul>
+	</div>
+	<script>
+		$(function() {
+			$('.tzzx_list dt').click(function() {
+				if($(this).parent().hasClass('active')) {
+					$(this).next('dd').slideUp();
+					$(this).find('.layui-icon').html('&#xe61a;');
+					$(this).parent().removeClass('active');
+				}else {
+					$(this).next('dd').slideDown();
+					$(this).find('.layui-icon').html('&#xe619;');
+					$(this).parent().addClass('active');
+				}
+			})
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../assets/css/layui.css">
+	<link rel="stylesheet" href="../assets/font2/iconfont.css">
+	<link rel="stylesheet" href="../assets/css/view.css"/>
+	<link rel="icon" href="/favicon.ico">
+	<script src="../assets/jquery.js"></script>
+	<title>结算中心-结算调价</title>
+</head>
+<body class="layui-view-body">
+	<div class="layui-content">
+		<div class="layui-page-header">
+		    <div class="pagewrap">
+		        <span class="layui-breadcrumb">
+		          <a href="">第三方平台管理</a>
+		          <a href="">套餐管理</a>
+		        </span>
+		    </div>
+		</div>
+		<div class="tool_pannel">
+			<form class="layui-form">
+				<div class="layui-form-item">
+					<div class="layui-form-inline">
+						<label class="layui-form-label">渠道名称：</label>
+						<div class="layui-input-inline">
+							<select name="" id=""></select>
+						</div>
+					</div>
+					<div class="layui-form-inline">
+						<label class="layui-form-label">订单号：</label>
+						<div class="layui-input-inline">
+							<input type="text" class="layui-input" placeholder="请输入">
+						</div>
+					</div>
+					<div class="layui-form-inline">
+						<label class="layui-form-label">医院单号：</label>
+						<div class="layui-input-inline">
+							<input type="text" class="layui-input" placeholder="请输入">
+						</div>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<div class="layui-form-inline">
+						<label class="layui-form-label" style="width: 70px;">姓名：</label>
+						<div class="layui-input-inline">
+							<input type="text" class="layui-input" placeholder="请选择">
+						</div>
+					</div>
+					<div class="layui-form-inline">
+						<label class="layui-form-label">手机号：</label>
+						<div class="layui-input-inline">
+							<input type="text" class="layui-input" placeholder="请选择">
+						</div>
+					</div>
+					<div class="layui-form-inline">
+						<label class="layui-form-label">部分退款：</label>
+						<div class="layui-input-inline">
+							<select></select>
+						</div>
+					</div>
+					<div class="layui-form-inline">
+						<button class="layui-btn layui-btn-blue"><i class="iconfont icon-sousuo"></i>搜索</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="table_wrap layui-form tbHasCheck">
+			<table class="layui-table" lay-skin="nob">
+				<thead>
+					<tr>
+						<th>标记</th>
+						<th>序号</th>
+						<th>订单来源</th>
+						<th>医院订单</th>
+						<th>套餐名称</th>
+						<th>姓名</th>
+						<th>手机号</th>
+						<th>原始结算价格</th>
+						<th>部分退款金额</th>
+						<th>结算调整</th>
+						<th>实际结算金额</th>
+						<th>结算状态</th>
+						<th>调价</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input onclick="biaoji(this)" type="checkbox" name="" title="" lay-skin="primary"></td>
+						<td>1</td>
+						<td>康康体检网</td>
+						<td>11515151515</td>
+						<td>李四李四李四李四李四李四李四</td>
+						<td>昂吗</td>
+						<td>1212121221</td>
+						<td>&yen;515155</td>
+						<td>&yen;515155</td>
+						<td>&yen;515155</td>
+						<td>&yen;515155</td>
+						<td>待结算</td>
+						<td class="show_bartd">
+							<span class="edit" onclick="tiaojiaEdit(this)"></span>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="" title="" lay-skin="primary"></td>
+						<td>1</td>
+						<td>康康体检网</td>
+						<td>11515151515</td>
+						<td>李四李四李四李四李四李四李四</td>
+						<td>昂吗</td>
+						<td>1212121221</td>
+						<td>&yen;515155</td>
+						<td>&yen;515155</td>
+						<td>&yen;515155</td>
+						<td>&yen;515155</td>
+						<td>待结算</td>
+						<td class="show_bartd">
+							<span class="edit"></span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- 分页样式 -->
+			<div class="table_pages">
+				<span class="page-prev"><i class="layui-icon">&#xe603;</i></span>
+				<a href="" class="on">1</a>
+				<a href="">2</a>
+				<a href="">3</a>
+				<a href="">4</a>
+				<span class="page-next"><i class="layui-icon">&#xe602;</i></span>
+				<span class="page-count">共 5 页</span>
+			</div>
+		</div>
+		<!-- 总计 -->
+		<div class="tabCountWrap">
+			<span>总计</span>
+			<span>订单数：4545</span>
+			<span>总金额：￥121212</span>
+			<span>部分退款金额：￥54545</span>
+			<span>实际结算金额：<span class="text_star">￥454545</span></span>
+			<button type="button" onclick="delet()" class="layui-btn layui-btn-blue">提交结算</button>
+		</div>
+	</div>
+	<!-- 调价弹窗 -->
+	<div class="edit_dialog">
+		<div class="layui-form">
+			<div class="layui-form-item">
+				<label class="layui-form-label" style="width: 126px;">请输入调整后金额：</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" placeholder="请输入">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label" style="width: 126px;">调整原因：</label>
+				<div class="layui-input-inline">
+					<textarea class="layui-textarea" placeholder="请输入至少五个字符"></textarea>
+				</div>
+			</div>
+			<div class="buttonwrap">
+				<a href="javascript:;" class="layui-btn layui-btn-primary close">取消</a>
+				<a href="javascript:;" class="layui-btn layui-btn-blue yes">保存</a>
+			</div>
+		</div>
+	</div>
+	<script src="../assets/layui.all.js"></script>
+	<script>
+		function tiaojiaEdit(that) {
+			var _tr = $(that).parents('tr');
+			//标记后才可以调价
+			if(_tr.find('input').is(':checked')==false) {
+				layer.msg('标记后才可以调价', { icon: 5, shade: 0.5 })
+			}else {
+				 edit()
+			}
+		}
+		//标记
+		$('.layui-form-checkbox').click(function() {
+			if($(this).hasClass('layui-form-checked')) {
+				$(this).parents('tr').addClass('text_star')
+			}else {
+				$(this).parents('tr').removeClass('text_star')
+			}
+		})
+		//调价弹窗
+		function edit() {
+			var i = layer.open({
+				type: 1,
+				title: ['调整结算金额','font-weight:bold;font-size:16px'],
+				area: ['auto', 'auto'],
+				content: $('.edit_dialog'),
+				cancel: function() {
+					$('.edit_dialog').hide()
+				}
+			})
+			$('.close').click(function() {
+				layer.close(i);
+				$('.edit_dialog').hide()
+			})
+		}
+		$('.yes').click(function(){
+			layer.msg('保存中...', { icon: 16, shade: [0.5, '#f5f5f5'],time: false });
+		})
+	</script>
+</body>
+</html>

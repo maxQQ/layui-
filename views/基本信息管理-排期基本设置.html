@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../assets/css/layui.css">
+	<link rel="stylesheet" href="../assets/font2/iconfont.css">
+	<link rel="stylesheet" href="../assets/css/view.css"/>
+	<link rel="icon" href="/favicon.ico">
+	<script src="../assets/jquery.js"></script>
+	<title>基本信息管理-排期基本设置</title>
+</head>
+<body class="layui-view-body">
+	<div class="layui-content">
+		<div class="layui-page-header">
+		    <div class="pagewrap">
+		        <span class="layui-breadcrumb">
+		          <a href="">第三方平台管理</a>
+		          <a href="">套餐管理</a>
+		        </span>
+		    </div>
+		</div>
+		<!-- 三块区 -->
+		<div class="box-3-wrap layui-col-space30 layui-row">
+			<div class="layui-col-md4">
+				<div class="box">
+					<img src="../assets/images/01.png" alt="">
+					<p>每天最大接待量</p>
+					<h3>12121221</h3>
+				</div>
+			</div>
+			<div class="layui-col-md4">
+				<div class="box">
+					<img src="../assets/images/02.png" alt="">
+					<p>其他预留量</p>
+					<h3>12121221</h3>
+				</div>
+			</div>
+			<div class="layui-col-md4">
+				<div class="box">
+					<img src="../assets/images/03.png" alt="">
+					<p>休息时间</p>
+					<h3>星期五</h3>
+				</div>
+			</div>
+		</div>
+		<div class="layui-row layui-form layui-col-space30 pqsz_wrap">
+			<div class="layui-col-md6">
+				<div class="pqsz_box" style="height: 400px;">
+					<div class="title">排期基本设置</div>
+					<div class="item">
+						<div class="i_title">预留名额设置</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label" style="width: 112px;padding: 6px 15px;">每天最大接待量：</label>
+							<div class="layui-input-inline">
+								<input type="text" class="layui-input" placeholder="请输入">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label" style="width: 112px;padding: 6px 15px;">其他预留信息：</label>
+							<div class="layui-input-inline">
+								<input type="text" class="layui-input" placeholder="请输入">
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="i_title" style="margin-bottom: 14px;">秀秀日设置</div>
+						<div class="checkes_wrap">
+							<input type="checkbox" name="" title="周一" lay-skin="primary">
+							<input type="checkbox" name="" title="周二" lay-skin="primary"> 
+							<input type="checkbox" name="" title="周三" lay-skin="primary"> 
+							<input type="checkbox" name="" title="周四" lay-skin="primary"> 
+							<input type="checkbox" name="" title="周五" lay-skin="primary"> 
+							<input type="checkbox" name="" title="周六" lay-skin="primary"> 
+							<input type="checkbox" name="" title="周日" lay-skin="primary"> 
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layui-col-md6">
+				<div class="pqsz_box" style="height: 400px;">
+					<div class="title">特殊日期设置</div>
+					<div class="chooseDate_wrap layui-row layui-col-space30">
+						<div class="layui-col-md6">
+							<div>
+								<div class="i_title">暂停预约设置(体检中心不能预约的日期)</div>
+								<input class="layui-input" id="time1" type="text" placeholder="请选择日期">
+								<div class="pushDataWrap">
+									<span>2018-09-09<i class="layui-icon">&#x1007;</i></span>
+									<span>2018-09-09<i class="layui-icon">&#x1007;</i></span>
+								</div>
+							</div>
+						</div>
+						<div class="layui-col-md6">
+							<div>
+								<div class="i_title">特殊可约日期(可以预约的特殊日期)</div>
+								<input class="layui-input" id="time2" type="text" placeholder="请选择日期">
+								<div class="pushDataWrap">
+									<span>2018-09-09<i class="layui-icon">&#x1007;</i></span>
+									<span>2018-09-09<i class="layui-icon">&#x1007;</i></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="c_btns_center">
+			<button class="layui-btn layui-btn-blue">保存</button>
+		</div>
+	</div>
+	<script src="../assets/layui.all.js"></script>
+	<script>
+		layui.use('laydate', function(){
+			var laydate = layui.laydate;   
+			//执行一个laydate实例
+			laydate.render({
+				elem: '#time1' //指定元素
+			});
+			laydate.render({
+				elem: '#time2' //指定元素
+			});
+		});
+	</script>
+</body>
+</html>

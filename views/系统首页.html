@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../assets/css/layui.css">
+	<link rel="stylesheet" href="../assets/font2/iconfont.css">
+	<link rel="stylesheet" href="../assets/css/view.css"/>
+	<link rel="icon" href="/favicon.ico">
+	<script src="../assets/jquery.js"></script>
+	<title>系统首页</title>
+</head>
+<body class="layui-view-body">
+	<div>
+		<div class="layui-form">
+			<div class="layui-input-inline">
+				<input type="text" class="layui-input" id="a">
+			</div>
+		</div>
+	</div>
+	<div class="layui-content">
+		<div class="layui-form indexWrap">
+			<div class="layui-form-item layui-col-space30">
+				<div class="layui-col-md3">
+					<div class="index_1">
+						<dl class="top">
+							<dt>总营业额</dt>
+							<dd><img src="../assets/images/a.png" alt=""></dd>
+						</dl>
+						<h3>454555</h3>
+						<div class="duibi">
+							<span>周同比<img src="../assets/images/up.png" alt=""><b>16%</b></span>
+							<span>日环比<img src="../assets/images/down.png" alt=""><b>16%</b></span>
+						</div>
+						<p>今日营业额<span>￥12,122</span></p>
+					</div>
+				</div>
+				<div class="layui-col-md3">
+					<div class="index_1">
+						<dl class="top">
+							<dt>总预约人数</dt>
+							<dd><img src="../assets/images/a.png" alt=""></dd>
+						</dl>
+						<h3>454555</h3>
+						
+						<p>今日预约人数<span>12122</span></p>
+					</div>
+				</div>
+				<div class="layui-col-md3">
+					<div class="index_1">
+						<dl class="top">
+							<dt>已结算金额</dt>
+							<dd><img src="../assets/images/a.png" alt=""></dd>
+						</dl>
+						<h3>454555</h3>
+						
+						<p>待结算金额<span>12,122</span></p>
+					</div>
+				</div>
+				<div class="layui-col-md3">
+					<div class="index_1">
+						<dl class="top">
+							<dt>今日预约总进度</dt>
+							<dd><img src="../assets/images/a.png" alt=""></dd>
+						</dl>
+						<h3>454555</h3>
+						
+						<p>日环比<img src="../assets/images/up.png" alt="">16%</p>
+					</div>
+				</div>
+			</div>
+			<div class="layui-form-item layui-col-space30">
+				<div class="layui-col-md8">
+					<div class="index_2">
+						<div class="top">总营业额<span>单位：万元</span></div>
+                        <div id="div_zyye" style="height:500px;"></div>
+					</div>
+				</div>
+				<div class="layui-col-md4">
+					<div class="index_2">
+						<div class="top">今日渠道预约情况</div>
+						<ul class="wrap1">
+							<li>
+								<div class="title1">康康体检网<span>85/100</span></div>
+								<div class="content1">
+									<label>100%</label>
+									<div class="layui-progress">
+										<div class="layui-progress-bar" lay-percent="10%" style="background-color: #3aa0ff;"></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="title1">中康网<span>85/100</span></div>
+								<div class="content1">
+									<label>100%</label>
+									<div class="layui-progress">
+										<div class="layui-progress-bar" lay-percent="10%" style="background-color: #36cbcb;"></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="title1">袋鼠健康<span>85/100</span></div>
+								<div class="content1">
+									<label>100%</label>
+									<div class="layui-progress">
+										<div class="layui-progress-bar" lay-percent="10%" style="background-color: #f1bb29;"></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="title1">健康160<span>85/100</span></div>
+								<div class="content1">
+									<label>100%</label>
+									<div class="layui-progress">
+										<div class="layui-progress-bar" lay-percent="10%" style="background-color: #4ecb73;"></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="title1">每天健康<span>85/100</span></div>
+								<div class="content1">
+									<label>100%</label>
+									<div class="layui-progress">
+										<div class="layui-progress-bar" lay-percent="10%" style="background-color: #f2637b;"></div>
+									</div>						
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<div class="index_2">
+					<div class="top">个渠道销售占比</div>
+                    <div id="div_yqdxzb" style="height:500px;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../assets/layui.all.js"></script>
+	<script>
+		layui.use('laydate', function(){
+			var laydate = layui.laydate;  
+			laydate.render({ 
+			  elem: '#a',
+			  type: 'time'
+			});
+		})
+		$(function() {
+			console.log($('.laydate-time-list').html());
+		})
+		
+	</script>
+</body>
+</html>
